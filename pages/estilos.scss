@@ -2,7 +2,7 @@
     --color_primario: #80461B;
     --color_primario_suave: rgba(183, 65, 14, 0.5);
     --color_negro: black;
-    --altura_header: 13em;
+    --altura_header: 12em;
     --padding_left_right: 1.2rem;
     --ancho_maximo: 1200px;
 }
@@ -37,6 +37,7 @@ ol,ul {
     padding: 5px;
     font-family: market deco;
 }
+
 .menu-hamburguesa {
     display: none;
 }
@@ -46,8 +47,8 @@ ol,ul {
 .ul-links {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.9);
-    position:absolute;
-    top: var(--altura_header);
+    position: absolute;
+    top: 100%;
     left: 0;
     height: 0;
     overflow: hidden;
@@ -58,9 +59,8 @@ ol,ul {
     gap: 1.5rem;
     transition: all .3s;
     font-family: market deco;
-    z-index: 1;
     font-size: 1.5em;
-    padding: 5px;
+    z-index: 1;
 }
 .link {
     color: white;
@@ -121,8 +121,8 @@ border: 2px solid var(--color_negro);
     align-items: center;
     height: auto;
     font-size: 1em;
-    padding: 30px;
-    margin: 1em auto;
+    padding: 1em;
+    margin: auto;
 }
 .container h2, h3, h4, h5, h6{
         font-family: amazing winter;
@@ -133,7 +133,7 @@ border: 2px solid var(--color_negro);
     color: white;
     background-color: var(--color_primario_suave);
     height: auto;
-    font-family: alido;
+    font-family: market deco;
     padding: 20px;
     text-align: center;
     justify-content: center;
@@ -221,7 +221,7 @@ border: 2px solid var(--color_negro);
     color: var(--color_negro);
     background-color: white;
     height: auto;
-    font-family: market deco;
+    font-family: alido;
     inline-size: 90%;
     border-color: #000;
     margin: 1em auto;
@@ -249,6 +249,7 @@ border: 2px solid var(--color_negro);
 .titulo-locpastas{
     color: var(--color_negro);
     text-align: center;
+    justify-content: center;
 }
 .mapa-local{
     display: flex;
@@ -330,13 +331,25 @@ border: 2px solid var(--color_negro);
         grid-template-columns: repeat(1, 1fr);
     }
 }
-@media (min-width:520px) {
+@media (min-width:500px) {
     .galeria{
         grid-template-columns: repeat(2, 1fr);
     }
+    .header{
+        height: 16em;
+    }
+}
+@media (min-width:680px){
+    .header{
+        height:19em;
+    }
 }
 
-@media (min-width:728px){
+@media (min-width:900px){
+    
+    .label-hamburguesa{
+        display: none;
+    }
     .header{
         height: 10em;
     }
@@ -349,7 +362,7 @@ border: 2px solid var(--color_negro);
         float: inline-start;
     }
     .ul-links{
-        position: static;
+        position:static;
         width: auto;
         height: auto;
         flex-direction: row;
@@ -357,7 +370,6 @@ border: 2px solid var(--color_negro);
         color: var(--color_negro);
         background-color: rgba(0, 0, 0, 0.8);
         border-radius: 3em;
-        padding: 5px;
         text-align: center;
         margin: 2em;
     }
